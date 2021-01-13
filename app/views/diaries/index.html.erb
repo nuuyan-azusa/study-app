@@ -1,11 +1,24 @@
-<div class="wrapper">
-<h1>タイトル</h1>
+<div class="top-bar">
+  <div class="wrapper">
+    <h1>タイトル</h1>
+  </div>
+  <% if user_signed_in? %>
+    <div class="user-nav">
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    
+    </div>
+  <% else %>
+    <div class="user-nav">
+      <%= link_to "ログイン", new_user_session_path %>
+      <%= link_to "新規登録", new_user_registration_path %>
+    </div>
+  <% end %>
 </div>
 <div class="main-bar">
   <div class="side-bar">
     サイドバー
   </div>
-  <div class="contents">
+  <div class="all-contents">
   <% @diaries.each do |diary| %>
   <%= diary.title %>
   <%= diary.text %>
