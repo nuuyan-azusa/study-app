@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>StudyApp</title>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-  勉強日記
-    <%= yield %>
-  </body>
-</html>
+<div class="wrapper">
+<h1>タイトル</h1>
+</div>
+<div class="main-bar">
+  <div class="side-bar">
+    サイドバー
+  </div>
+  <div class="contents">
+  <% @diaries.each do |diary| %>
+  <%= diary.title %>
+  <%= diary.text %>
+  <%= diary.year_id %>
+  <%= diary.month_id %>
+  <%= diary.day_id %>
+  <%= diary.hour_id %>
+  <%= diary.minute_id %>
+  <% end %>
+  </div>
+</div>
