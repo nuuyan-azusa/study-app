@@ -1,5 +1,9 @@
 class OptionsController < ApplicationController
 
+  def index
+    @options = Option.includes(:user).order('created_at DESC')
+  end
+  
   def new
     @option = Option.new
   end
