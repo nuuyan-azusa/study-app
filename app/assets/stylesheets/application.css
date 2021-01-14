@@ -21,7 +21,7 @@
 .main-bar{
   display: flex;
   height: 1000px;
-  background-color: red;
+  background-color: rgb(111, 223, 176);
 }
 .side-bar{
   width: 20vw;
@@ -74,8 +74,6 @@ h1,h3{
 
 .link{
   display: block;
-  width: 150px;
-  padding: 10px;
   color: rgb(116, 90, 199);
   text-decoration: none;
   text-align: center;

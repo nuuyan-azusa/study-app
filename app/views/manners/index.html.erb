@@ -1,6 +1,8 @@
-<% @manners.each do |manner| %>
-  <%= link_to manner_path(manner.id) do %>
+<div class="manner-list">
+    <% @manners.each do |manner| %>
+    <%= link_to manner_path(manner.id), class:"list" do %>
     <%= manner.name %>
-  <% end %>
-<% end %>
-<%= link_to "メソッドを追加する", new_manner_path, class:"post" %>
+    <% end %>
+    <% end %>
+<%= link_to "メソッドを追加する", new_manner_path, class:"post manner-btn" %>
+</div>
