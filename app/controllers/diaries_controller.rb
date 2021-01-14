@@ -17,6 +17,10 @@ class DiariesController < ApplicationController
     end
   end
 
+  def show
+    @diary = Diary.find(params[:id])
+  end
+
   private
   def diary_params
     params.require(:diary).permit(:title,:text,:year_id,:month_id,:day_id,:hour_id,:minute_id,:url_text).merge(user_id: current_user.id)
