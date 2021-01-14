@@ -60,3 +60,16 @@
   width: 100px;
 }
 
+h1,h3{
+  text-align: center;
+}
+
+.diary-day{
+  font-size: 20px;
+  text-align: center;
+}
+
+.diary-title{
+  font-size: 30px;
+  text-align: center;
+}
