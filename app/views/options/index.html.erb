@@ -1,0 +1,6 @@
+<% @options.each do |option| %>
+  <%= link_to options_path(option.id) do %>
+    <%= option.name %>
+  <% end %>
+<% end %>
+<%= link_to "オプションを追加する", new_option_path, class:"post" %>
