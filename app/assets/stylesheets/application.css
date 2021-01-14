@@ -19,17 +19,16 @@
 }
 
 .main-bar{
-  height: 1000px;
   display: flex;
+  height: 1000px;
+  background-color: red;
 }
 .side-bar{
   width: 20vw;
-  height: 100%;
   background-color: rgb(155, 208, 221);
 }
 .current-contents{
   width: 80vw;
-  background-color: red;
 }
 
 .diary-box {
