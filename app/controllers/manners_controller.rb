@@ -18,6 +18,10 @@ class MannersController < ApplicationController
     end
   end
 
+  def show
+    @manner = Manner.find(params[:id])
+  end
+
     private
     def manner_params
       params.require(:manner).permit(:name, :text, :url_text).merge(user_id: current_user.id)
