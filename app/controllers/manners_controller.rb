@@ -1,0 +1,2 @@
+class MannersController < ApplicationController
+end
