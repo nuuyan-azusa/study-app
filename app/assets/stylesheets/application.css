@@ -24,7 +24,7 @@
 .side-bar{
   width: 20vw;
   height: 100%;
-  background-color: blue;
+  background-color: rgb(155, 208, 221);
 }
 .current-contents{
   width: 80vw;
