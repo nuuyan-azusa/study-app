@@ -1,4 +1,9 @@
 class MannersController < ApplicationController
+
+  def index
+    @manners = Manner.includes(:user).order('created_at DESC')
+  end
+
   def new
     @manner = Manner.new
   end
@@ -7,7 +12,7 @@ class MannersController < ApplicationController
     @manner = Manner.new(manner_params)
     if @manner.valid?
       @manner.save
-      redirect_to root_path
+      redirect_to manners_path
     else
       render :new
     end
