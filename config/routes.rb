@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'diaries#index'
   resources :diaries, only: [:index, :new, :create, :show]
   resources :manners, only: [:index, :new, :create, :show]
+  resources :options, only: [:new]
 end
