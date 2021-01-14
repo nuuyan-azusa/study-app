@@ -2,10 +2,12 @@
   height: 20vh;
   background-color: yellow;
   display: flex;
+  justify-content: space-around;
 }
 
 .post{
   display: block;
+  height: 50px;
   width: 150px;
   padding: 10px;
   border: 1px solid white;
@@ -14,7 +16,6 @@
   text-decoration: none;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 20px;
 }
 
 .main-bar{
@@ -69,5 +70,14 @@ h1,h3{
 
 .diary-title{
   font-size: 30px;
+  text-align: center;
+}
+
+.link{
+  display: block;
+  width: 150px;
+  padding: 10px;
+  color: rgb(116, 90, 199);
+  text-decoration: none;
   text-align: center;
 }

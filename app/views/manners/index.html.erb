@@ -1,0 +1,6 @@
+<% @manners.each do |manner| %>
+  <%= manner.name %>
+  <%= manner.text %>
+  <%= manner.url_text %>
+<% end %>
+<%= link_to "メソッドを追加する", new_manner_path, class:"post" %>
