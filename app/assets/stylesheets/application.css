@@ -28,13 +28,11 @@
 }
 .current-contents{
   width: 80vw;
-  height: 100%;
   background-color: red;
 }
 
 .diary-box {
   flex-direction: column;
-  background-color: lightgray;
   display: flex;
   justify-content: center;
   align-items: center;

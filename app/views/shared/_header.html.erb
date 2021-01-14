@@ -1,6 +1,6 @@
   <div class="top-bar">
   <div class="wrapper">
-    <h1>タイトル</h1>
+  <%= link_to "#{current_user.nickname}の日記", root_path %>
   </div>
   <% if user_signed_in? %>
     <div class="user-nav">

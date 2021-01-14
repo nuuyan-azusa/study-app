@@ -1,3 +1,4 @@
+
 <%= render partial: "shared/header" %>
 <div class="main-bar">
 <%= render partial: "shared/side-bar" %>
@@ -9,9 +10,11 @@
       <%= diary.month.name %>月
       <%= diary.day.name %>日
     </div>
-    <div class="diary-title">
+      <%= link_to diary_path(diary.id) do %>
+      <div class="diary-title">
       <%= diary.title %>
-    </div>
+      </div>
+      <% end %>
   <% end %>
 </div>
 </div>
