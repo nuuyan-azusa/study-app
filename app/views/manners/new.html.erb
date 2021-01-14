@@ -1,0 +1,10 @@
+<%= render partial: "shared/header" %>
+<div class="main-bar">
+  <%= render partial: "shared/side-bar" %>
+    <%= form_with model: @manner, url:manners_path, local: true do |f| %>
+        <%= f.text_field :name, class:"name", placeholder:"メソッド名" %>
+        <%= f.text_area :text, class:"explanation", placeholder:"説明" %>
+        <%= f.text_field :url_text, class:"reference-url", placeholder:"参考にした記事URL" %>
+        <%= f.submit "投稿する", class:"btn" %>
+    <% end %>
+</div>

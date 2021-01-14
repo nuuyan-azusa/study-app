@@ -33,7 +33,7 @@ has_many :others
 
 belongs_to :user
 
-## methodsテーブル
+## mannersテーブル
 
 | Column   | Type       | Options     
 | -------- | ---------- | ----------- 
