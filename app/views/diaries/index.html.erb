@@ -1,7 +1,3 @@
-
-<%= render partial: "shared/header" %>
-<div class="main-bar">
-<%= render partial: "shared/side-bar" %>
 <div class="current-contents">
   <% @diaries.each do |diary| %>
   <div class="diary">
@@ -15,6 +11,6 @@
       <%= diary.title %>
       </div>
       <% end %>
-  <% end %>
-</div>
+    <% end %>
+  </div>
 </div>
