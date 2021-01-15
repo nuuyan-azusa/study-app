@@ -18,10 +18,6 @@ class OptionsController < ApplicationController
     end
   end
 
-  def show
-    @option = Option.find(params[:id])
-  end
-
   private
   def option_params
     params.require(:option).permit(:name, :text, :url_text).merge(user_id: current_user.id)

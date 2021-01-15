@@ -1,8 +1,8 @@
-<div class="new-diaries">
+<div class="current-contents">
   <%= form_with model: @diary, url:diaries_path, local: true do |f| %>
     <%= render 'error_messages', model: @diary %>
     <div class="diary-box">
-        <h2>新規作成画面<h2>
+        <h1>新規作成画面<h1>
         <div class="text-box">
         <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
         <%= f.text_area :text, class:"text", placeholder:"テキスト" %>

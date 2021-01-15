@@ -1,11 +1,6 @@
-<div class="index-diaries">
-  <%= render partial: "shared/side-bar" %>
-  <div class="options">
-  <div class="option-list">
 <% @options.each do |option| %>
-  <%= link_to option_path(option.id), class:"link" do %>
+  <%= link_to options_path(option.id) do %>
     <%= option.name %>
   <% end %>
 <% end %>
-<%= link_to "オプションを追加", new_option_path, class:"post" %>
-</div>
+<%= link_to "オプションを追加する", new_option_path, class:"post" %>

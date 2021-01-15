@@ -1,8 +1,33 @@
+.top-bar{
+  height: 20vh;
+  background-color: yellow;
+  display: flex;
+  justify-content: space-around;
+}
 
+.post{
+  display: block;
+  height: 50px;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+}
 
-
-.main-contents-bar{
-  background-color: rgb(193, 72, 113);
+.main-bar{
+  display: flex;
+  height: 1000px;
+  background-color: rgb(111, 223, 176);
+}
+.side-bar{
+  width: 20vw;
+  background-color: rgb(155, 208, 221);
+}
+.current-contents{
   width: 80vw;
 }
 
@@ -33,7 +58,7 @@
   width: 100px;
 }
 
-h2{
+h1,h3{
   text-align: center;
 }
 
@@ -53,4 +78,3 @@ h2{
   text-decoration: none;
   text-align: center;
 }
-
