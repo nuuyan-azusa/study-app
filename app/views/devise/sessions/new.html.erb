@@ -1,7 +1,7 @@
 <%= render partial: "shared/header" %>
 <div class="main-bar">
-<%= render partial: "shared/side-bar" %>
-<div class="current-contents contents row">
+  <%= render partial: "shared/side-bar" %>
+<div class="contents row">
   <div class="container">
     <h2>Log in</h2>
     <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
@@ -23,9 +23,8 @@
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit "Log in", class:"user-btn" %>
       </div>
     <% end %>
   </div>
-</div>
 </div>

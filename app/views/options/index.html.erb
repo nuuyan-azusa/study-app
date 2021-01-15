@@ -1,6 +1,14 @@
-<% @options.each do |option| %>
-  <%= link_to options_path(option.id) do %>
-    <%= option.name %>
-  <% end %>
-<% end %>
-<%= link_to "オプションを追加する", new_option_path, class:"post" %>
+<%= render partial: "shared/header" %>
+<div class="main-bar">
+  <%= render partial: "shared/side-bar" %>
+  <div class="index-options">
+    <% @options.each do |option| %>
+      <div class="option">
+        <%= link_to option_path(option.id), class:"link" do %>
+          <%= option.name %>
+        <% end %>
+      </div>
+    <% end %>
+  <%= link_to "オプションを追加", new_option_path, class:"post post-btn" %>
+  </div>
+</div>

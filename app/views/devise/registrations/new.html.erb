@@ -1,15 +1,15 @@
 <%= render partial: "shared/header" %>
 <div class="main-bar">
-<%= render partial: "shared/side-bar" %>
-<div class="contents row current-contents">
+  <%= render partial: "shared/side-bar" %>
+  <div class="contents row">
   <div class="container">
     <h2>Sign up</h2>
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <%= devise_error_messages! %>
 
       <div class="field">
-        <%= f.label :nickname %> <br />
-        <%= f.text_field :nickname %>
+        <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
+        <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
       </div>
 
       <div class="field">
@@ -31,9 +31,8 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "Sign up" %>
+        <%= f.submit "Sign up", class:"user-btn" %>
       </div>
     <% end %>
   </div>
-</div>
 </div>
