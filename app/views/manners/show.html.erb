@@ -1,3 +1,14 @@
-<%= @manner.name %>
-<%= @manner.text %>
-<%= @manner.url_text %>
+<%= render partial: "shared/header" %>
+<div class="main-bar">
+  <%= render partial: "shared/side-bar" %>
+  <div class="show-manner">
+    <h3>メソッド名</h3>
+    <%= @manner.name %>
+    <h3>解説</h3>
+    <%= @manner.text %>
+    <% if @manner.url_text.present? %>
+      <h3>参考にしたサイトURL</h3>
+      <%= @manner.url_text %>
+    <% end%>
+  </div>
+</div>

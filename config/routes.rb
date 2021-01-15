@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'diaries#index'
   resources :diaries, only: [:index, :new, :create, :show]
   resources :manners, only: [:index, :new, :create, :show]
-  resources :options, only: [:index, :new, :create]
-  resources :expressions, only: [:show]
+  resources :options, only: [:index, :new, :create, :show]
+  resources :expressions, only: [:new, :create]
 end

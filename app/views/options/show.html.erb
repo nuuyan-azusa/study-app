@@ -1,0 +1,13 @@
+<%= render partial: "shared/header" %>
+<div class="main-bar">
+  <%= render partial: "shared/side-bar" %>
+  <div class="show-option">
+    <h3>オプション名</h3>
+    <%= @option.name %>
+    <h3>解説</h3>
+    <%= @option.text %>
+    <% if @option.url_text.present?%>
+      <%= @option.url_text %>
+    <% end %>
+  </div>
+</div>
