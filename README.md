@@ -59,6 +59,19 @@ belongs_to :user
 
 belongs_to :user
 
+## expressionsテーブル
+
+| Column   | Type       | Options
+| -------- | ---------- | ----------- 
+| name     | string     | null: false
+| text     | text       | null: false
+| url_text | string     |
+| user     | references | foreign_key: true
+
+### Association
+
+belongs_to :user
+
 ## othersテーブル
 
 | Column | Type       | Options
