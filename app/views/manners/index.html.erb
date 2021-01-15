@@ -1,8 +1,11 @@
-<div class="manner-list">
+<div class="main-bar">
+  <%= render partial: "shared/side-bar" %>
+  <div class="main-contents-bar">
+  <div class="manner-list">
     <% @manners.each do |manner| %>
-    <%= link_to manner_path(manner.id), class:"list" do %>
+    <%= link_to manner_path(manner.id), class:"link" do %>
     <%= manner.name %>
     <% end %>
     <% end %>
-<%= link_to "メソッドを追加する", new_manner_path, class:"post manner-btn" %>
+<%= link_to "メソッドを追加", new_manner_path, class:"post manner-btn" %>
 </div>

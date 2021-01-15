@@ -1,6 +1,8 @@
-<div class="current-contents">
+<div class="main-bar">
+  <%= render partial: "shared/side-bar" %>
+  <div class="index-diaries">
   <% @diaries.each do |diary| %>
-  <div class="diary">
+  <div class="diaries">
     <div class="diary-day">
       <%= diary.year.name %>年
       <%= diary.month.name %>月

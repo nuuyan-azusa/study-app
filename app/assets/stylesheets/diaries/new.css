@@ -1,11 +1,3 @@
-
-
-
-.main-contents-bar{
-  background-color: rgb(193, 72, 113);
-  width: 80vw;
-}
-
 .diary-box {
   flex-direction: column;
   display: flex;
@@ -32,25 +24,3 @@
   height: 30px;
   width: 100px;
 }
-
-h2{
-  text-align: center;
-}
-
-.diary-day{
-  font-size: 20px;
-  text-align: center;
-}
-
-.diary-title{
-  font-size: 30px;
-  text-align: center;
-}
-
-.link{
-  display: block;
-  color: rgb(116, 90, 199);
-  text-decoration: none;
-  text-align: center;
-}
-

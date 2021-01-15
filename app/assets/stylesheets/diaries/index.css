@@ -1,0 +1,15 @@
+.side-bar{
+  width: 20vw;
+  background-color: rgb(155, 208, 221);
+  border-right: 2px solid white;
+}
+
+.main-bar{
+  display: flex;
+  height: 1000px;
+  background-color:black;
+}
+
+h2{
+  text-align: center;
+}
