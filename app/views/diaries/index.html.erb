@@ -1,16 +1,16 @@
-<div class="current-contents">
-  <% @diaries.each do |diary| %>
-  <div class="diary">
-    <div class="diary-day">
-      <%= diary.year.name %>年
-      <%= diary.month.name %>月
-      <%= diary.day.name %>日
-    </div>
-      <%= link_to diary_path(diary.id), class:"link" do %>
-      <div class="diary-title">
-      <%= diary.title %>
+<%= render partial: "shared/header" %>
+<div class="main-bar">
+  <%= render partial: "shared/side-bar" %>
+  <div class="index-diaries">
+    <% @diaries.each do |diary| %>
+      <div class="diary">
+        <%= diary.year.name %>年
+        <%= diary.month.name %>月
+        <%= diary.day.name %>日
+        <%= link_to diary_path(diary.id), class:"link" do %>
+          <%= diary.title %>
+        <% end %>
       </div>
-      <% end %>
     <% end %>
   </div>
 </div>
