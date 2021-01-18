@@ -1,7 +1,7 @@
 <%= render partial: "shared/header" %>
 <div class="main-bar">
   <%= render partial: "shared/side-bar" %>
-  <div class="show-manner">
+  <div class="show-expression">
     <h2>正規表現</h2>
     <div class="show-name">
       <%= @expression.name %>
@@ -15,5 +15,6 @@
         <a href="<% @expression.url_text %>">参考にしたサイト</a>
       </div>
     <% end %>
+    <%= link_to "編集する", edit_expression_path, class:"post edit-btn" %>
   </div>
 </div>

@@ -1,0 +1,15 @@
+<%= render partial: "shared/header" %>
+<div class="main-bar">
+  <%= render partial: "shared/side-bar" %>
+  <div class="new-expression">
+    <%= form_with model: @expression, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: @expression %>
+
+    <%= f.text_field :name, class:"name form-box", placeholder:"正規表現" %>
+    <%= f.text_area :text, class:"text form-box", placeholder:"説明" %>    
+    <%= f.text_field :url_text, class:"url-text form-box", placeholder:"参考にした記事URL" %>
+    <%= f.submit "投稿する", class:"btn post" %>
+    <% end %>
+  </div>
+</div>

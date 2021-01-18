@@ -83,7 +83,7 @@
 .index-diaries, .new-diary, .show-diary,
 .index-manners, .new-manner, .show-manner,
 .index-options, .new-option, .show-option,
-.index-expressions, .new-expression,
+.index-expressions, .new-expression, .show-expression,
 .contents{
   text-align: center;
   width: 80vw;
