@@ -12,7 +12,7 @@ class OptionsController < ApplicationController
     @option = Option.new(option_params)
     if @option.valid?
       @option.save
-      redirect_to root_path
+      redirect_to options_path
     else
       render :new
     end
