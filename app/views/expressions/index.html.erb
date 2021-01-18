@@ -4,7 +4,7 @@
   <div class="index-expressions">
     <% @expressions.each do |expression| %>
       <div class="expression">
-        <%= link_to root_path, class:"link expression-name" do %>
+        <%= link_to  expression_path(expression.id), class:"link expression-name" do %>
           <%= expression.name %>
         <% end %>
       </div>

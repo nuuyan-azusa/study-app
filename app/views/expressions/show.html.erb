@@ -1,0 +1,19 @@
+<%= render partial: "shared/header" %>
+<div class="main-bar">
+  <%= render partial: "shared/side-bar" %>
+  <div class="show-manner">
+    <h2>正規表現</h2>
+    <div class="show-name">
+      <%= @expression.name %>
+    </div>
+    <h2>解説</h2>
+    <div class="show-text">
+      <%= @expression.text %>
+    </div>
+    <% if @expression.url_text.present?%>
+      <div class="show-url">
+        <a href="<% @expression.url_text %>">参考にしたサイト</a>
+      </div>
+    <% end %>
+  </div>
+</div>
