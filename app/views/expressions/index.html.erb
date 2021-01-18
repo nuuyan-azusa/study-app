@@ -1,0 +1,14 @@
+<%= render partial: "shared/header" %>
+<div class="main-bar">
+  <%= render partial: "shared/side-bar" %>
+  <div class="index-expressions">
+    <% @expressions.each do |expression| %>
+      <div class="expression">
+        <%= link_to root_path, class:"link expression-name" do %>
+          <%= expression.name %>
+        <% end %>
+      </div>
+    <% end %>
+    <%= link_to "正規表現を追加", new_expression_path, class:"post post-btn" %>
+  </div>
+</div>

@@ -2,13 +2,18 @@
 <div class="main-bar">
   <%= render partial: "shared/side-bar" %>
   <div class="show-manner">
-    <h3>メソッド名</h3>
-    <%= @manner.name %>
-    <h3>解説</h3>
-    <%= @manner.text %>
-    <% if @manner.url_text.present? %>
-      <h3>参考にしたサイトURL</h3>
-      <%= @manner.url_text %>
-    <% end%>
+    <h2>メソッド名</h2>
+    <div class="show-name">
+      <%= @manner.name %>
+    </div>
+    <h2>解説</h2>
+    <div class="show-text">
+      <%= @manner.text %>
+    </div>
+    <% if @manner.url_text.present?%>
+      <div class="show-url">
+        <a href="<% @manner.url_text %>">参考にしたサイト</a>
+      </div>
+    <% end %>
   </div>
 </div>

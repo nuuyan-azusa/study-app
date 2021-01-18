@@ -3,18 +3,22 @@
   <%= render partial: "shared/side-bar" %>
   <div class="new-diary">
     <%= form_with model: @diary, url:diaries_path, local: true do |f| %>
-      <%= render 'error_messages', model: @diary %>
+
+      <%= render 'shared/error_messages', model: @diary %>
+
       <h2>新規作成画面<h2>
       <div class="text-box">
-      <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
-      <%= f.text_area :text, class:"text", placeholder:"テキスト" %>        <%= f.text_field :url_text, class:"url-text", placeholder:"URL" %>
+      <%= f.text_field :title, class:"title form-box", placeholder:"タイトル" %>
+      <%= f.text_area :text, class:"text form-box", placeholder:"テキスト" %>
+      <%= f.text_field :url_text, class:"url-text form-box", placeholder:"URL" %>
       <h3>勉強した日</h3>
       <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class:"year-select"} ) %>年
       <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"month-select"} ) %>月
       <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class:"day-select"} ) %>日
       <h3>勉強した時間</h3>
-      <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"hour-select"} ) %>時間        <%= f.collection_select(:minute_id, Minute.all, :id, :name, {}, {class:"minute-select"} ) %>分
-      <%= f.submit "投稿する", class:"post" %>
+      <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"hour-select"} ) %>時間        
+      <%= f.collection_select(:minute_id, Minute.all, :id, :name, {}, {class:"minute-select"} ) %>分
+      <%= f.submit "投稿する", class:"post btn" %>
     <% end %>
   </div>
 </div>
