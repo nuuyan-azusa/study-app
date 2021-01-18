@@ -121,7 +121,7 @@
 
 .form-box{
   display: block;
-  margin: 0 auto 30px;
+  margin: 0 auto 5vh;
 }
 
 .btn{
@@ -138,9 +138,20 @@
   height: 20vh;
 }
 
+.text-box{
+  margin: 10vh auto;
+}
+
+.day-box, .time-box{
+  display: flex;
+  margin: 5vh auto;
+  justify-content: center;
+}
+
 .year-select, .month-select, .day-select, .hour-select, .minute-select{
+  display: block;
   height: 4vh;
-  margin-right: 1vw;
+  margin: 0 3vw;
 }
 
 .year-select{
