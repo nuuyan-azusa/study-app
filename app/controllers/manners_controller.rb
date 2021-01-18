@@ -1,6 +1,6 @@
 class MannersController < ApplicationController
-  before_action :set_manner, only: [:show, :edit, :update]
-  before_action :move_manner, only: [:edit]
+  before_action :set_manner, only: [:show, :edit, :update, :destroy]
+  before_action :move_manner, only: [:edit, :destroy]
   def index
     @manners = Manner.includes(:user).order('created_at DESC')
   end
@@ -21,6 +21,25 @@ class MannersController < ApplicationController
 
   def show
     @manner = Manner.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @manner.update(manner_params)
+      redirect_to manner_path(@manner.id)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @manner.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   private
