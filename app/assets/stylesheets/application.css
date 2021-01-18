@@ -95,6 +95,14 @@
   margin: 40px auto;
 }
 
+.delete-btn{
+  margin: 0 auto 15vh;
+}
+
+.edit-btn{
+  margin: 0 auto;
+}
+
 /* ユーザー登録、ログイン */
 
 .user-btn{
