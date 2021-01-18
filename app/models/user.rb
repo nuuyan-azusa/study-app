@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :diaries
   has_many :manners
   has_many :options
+  has_many :expressions
 
   validates :nickname, presence: true
 end

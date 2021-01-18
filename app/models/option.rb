@@ -4,4 +4,5 @@ class Option < ApplicationRecord
     validates :name
     validates :text
   end
+  
 end
