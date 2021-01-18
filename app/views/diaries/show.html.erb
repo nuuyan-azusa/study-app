@@ -28,7 +28,4 @@
       <%= @diary.minute.name %>分
     </div>
   </div>
-  <% if user_signed_in? && current_user.id == @diary.id %>
-    <%= link_to "日記を編集する", edit_diary_path, class:"post post-btn" %>
-  <% end %>
 </div>
