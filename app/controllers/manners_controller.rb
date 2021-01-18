@@ -20,7 +20,6 @@ class MannersController < ApplicationController
   end
 
   def show
-    @manner = Manner.find(params[:id])
   end
 
   def edit
