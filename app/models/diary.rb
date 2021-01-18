@@ -19,5 +19,4 @@ class Diary < ApplicationRecord
     validates :month_id
     validates :year_id
   end
-
 end
