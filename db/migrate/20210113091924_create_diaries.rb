@@ -9,6 +9,7 @@ class CreateDiaries < ActiveRecord::Migration[6.0]
       t.integer :hour_id,     null: false
       t.integer :minute_id,   null: false
       t.string :url_text
+      t.references :user,  foreign_key: true
       t.timestamps
     end
   end
