@@ -16,5 +16,6 @@
       </div>
     <% end %>
     <%= link_to "編集する", edit_expression_path, class:"post edit-btn" %>
+    <%= link_to "削除する", expression_path(@expression.id), method: :delete, class:"post delete-btn" %>
   </div>
 </div>

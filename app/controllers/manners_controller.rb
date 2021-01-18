@@ -35,7 +35,7 @@ class MannersController < ApplicationController
 
   def destroy
     if @manner.destroy
-      redirect_to root_path
+      redirect_to manners_path
     else
       render :show
     end

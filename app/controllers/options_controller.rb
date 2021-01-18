@@ -36,7 +36,7 @@ class OptionsController < ApplicationController
 
   def destroy
     if @option.destroy
-      redirect_to root_path
+      redirect_to options_path
     else
       render :show
     end
