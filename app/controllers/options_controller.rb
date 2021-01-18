@@ -1,6 +1,6 @@
 class OptionsController < ApplicationController
-  before_action :set_option, only: [:show, :edit, :update]
-  before_action :move_option, only: [:edit]
+  before_action :set_option, only: [:show, :edit, :update, :destroy]
+  before_action :move_option, only: [:edit, :destroy]
 
   def index
     @options = Option.includes(:user).order('created_at DESC')
@@ -31,6 +31,14 @@ class OptionsController < ApplicationController
       redirect_to option_path(@option.id)
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @option.destroy
+      redirect_to root_path
+    else
+      render :show
     end
   end
 
