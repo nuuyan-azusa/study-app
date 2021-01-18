@@ -18,6 +18,10 @@ class ExpressionsController < ApplicationController
     end
   end
 
+  def show
+    @expression = Expression.find(params[:id])
+  end
+
   private
   def expression_params
     params.permit(:name, :text, :url_text).merge(user_id: current_user.id)
