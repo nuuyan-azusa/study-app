@@ -72,5 +72,4 @@ ActiveRecord::Schema.define(version: 2021_01_15_091527) do
   add_foreign_key "expressions", "users"
   add_foreign_key "manners", "users"
   add_foreign_key "options", "users"
-  add_foreign_key "regular_expressions", "users"
 end

@@ -1,0 +1,30 @@
+<%= render partial: "shared/header" %>
+<div class="main-bar">
+  <%= render partial: "shared/side-bar" %>
+  <div class="new-diary">
+    <%= form_with model: @diary, local: true do |f| %>
+
+      <h2>新規作成画面<h2>
+
+       <%= render 'shared/error_messages', model: @diary %>
+       
+      <div class="text-box">
+      <%= f.text_field :title, class:"title form-box", placeholder:"タイトル" %>
+      <%= f.text_area :text, class:"text form-box", placeholder:"テキスト" %>
+      <%= f.text_field :url_text, class:"url-text form-box", placeholder:"URL" %>
+      </div>
+      <h4>勉強した日</h4>
+      <div class="day-box">
+        <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class:"year-select"} ) %>年
+        <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"month-select"} ) %>月
+        <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class:"day-select"} ) %>日
+      </div>
+      <h4>勉強した時間</h4>
+      <div class="time-box">
+        <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"hour-select"} ) %>時間        
+        <%= f.collection_select(:minute_id, Minute.all, :id, :name, {}, {class:"minute-select"} ) %>分
+      </div>
+      <%= f.submit "投稿する", class:"post btn" %>
+    <% end %>
+  </div>
+</div>
