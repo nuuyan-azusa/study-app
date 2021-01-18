@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :diaries
   resources :manners
   resources :options
-  resources :expressions, only: [:index, :new, :create, :show]
+  resources :expressions, only: [:index, :new, :create, :show, :edit, :update]
 end
