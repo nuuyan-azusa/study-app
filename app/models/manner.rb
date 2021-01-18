@@ -4,4 +4,5 @@ class Manner < ApplicationRecord
     validates :name
     validates :text
   end
+  
 end

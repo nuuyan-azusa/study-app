@@ -1,4 +1,8 @@
 class ExpressionsController < ApplicationController
+
+  def index
+    @expressions = Expression.includes(:user).order('created_at DESC')
+  end
   
   def new
     @expression = Expression.new
@@ -8,7 +12,7 @@ class ExpressionsController < ApplicationController
     @expression = Expression.new(expression_params)
     if @expression.valid?
       @expression.save
-      redirect_to root_path
+      redirect_to expressions_path
     else
       render :new
     end
@@ -16,7 +20,7 @@ class ExpressionsController < ApplicationController
 
   private
   def expression_params
-    params.require(:expression).permit(:name, :text, :url_text).merge(user_id: current_user.id)
+    params.permit(:name, :text, :url_text).merge(user_id: current_user.id)
   end
 
 end

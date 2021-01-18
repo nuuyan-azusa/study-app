@@ -49,8 +49,13 @@
 
 /* 一覧表示 */
 
-.diary, .manner, .option{
+.diary, .manner, .option, .expression{
   padding-bottom: 40px;
+}
+
+.diary-title, .expression-name, .manner-name, .option-name{
+  font-size: 18px;
+  padding-top: 1vh;
 }
 
 /* 詳細ページ */
@@ -59,12 +64,26 @@
   padding-bottom: 40px;
 }
 
+.diary-day, .diary-contents, .diary-time{
+  padding-bottom: 8vh;
+}
+
+.show-title, .show-name, .show-text, .show-url{
+  padding-bottom: 3vh;
+}
+
+.show-text{
+  width: 70%;
+  margin: auto;
+}
+
+
 /* メインバー */
 
 .index-diaries, .new-diary, .show-diary,
 .index-manners, .new-manner, .show-manner,
 .index-options, .new-option, .show-option,
-.new-expression,
+.index-expressions, .new-expression,
 .contents{
   text-align: center;
   width: 80vw;
@@ -82,4 +101,51 @@
   margin: 40px auto;
   width: 150px;
   padding: 10px;
+
+/* エラーメッセージ */
+
+.error-alert {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.error-message {
+  font-size: 1.3vw;
+  list-style: circle;
+  color: rgb(182, 48, 0);
+}
+
+/* 投稿画面 */
+
+.form-box{
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.btn{
+  margin: 50px auto 50px;
+}
+
+.name, .url-text, .title{
+  width: 50%;
+  height: 5vh;
+}
+
+.text{
+  width: 50%;
+  height: 20vh;
+}
+
+.year-select, .month-select, .day-select, .hour-select, .minute-select{
+  height: 4vh;
+  margin-right: 1vw;
+}
+
+.year-select{
+  width: 8vw;
+}
+
+.month-select, .day-select, .hour-select, .minute-select{
+  width: 5vw;
 }

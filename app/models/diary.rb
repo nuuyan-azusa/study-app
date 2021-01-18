@@ -11,4 +11,13 @@ class Diary < ApplicationRecord
     validates :title
     validates :text
   end
+
+  with_options numericality: { other_than: 0, message: 'Select' } do
+    validates :day_id
+    validates :hour_id
+    validates :minute_id
+    validates :month_id
+    validates :year_id
+  end
+
 end

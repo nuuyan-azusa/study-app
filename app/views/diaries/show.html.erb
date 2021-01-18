@@ -2,14 +2,30 @@
 <div class="main-bar">
   <%= render partial: "shared/side-bar" %>
   <div class="show-diary">
-    <%= @diary.year.name %>年
-    <%= @diary.month.name %>月
-    <%= @diary.day.name %>日
-    <%= @diary.title %>
-    <%= @diary.text %>
-    <%= @diary.url_text %>
-    勉強時間
-    <%= @diary.hour.name %>時間
-    <%= @diary.minute.name %>分
+    <h2>勉強した日</h2>
+    <div class="diary-day">
+      <%= @diary.year.name %>年
+      <%= @diary.month.name %>月
+      <%= @diary.day.name %>日
+    </div>
+    <h2>内容</h2>
+    <div class="diary-contents">
+      <div class="show-title">
+        <%= @diary.title %>
+      </div>
+      <div class="show-text">
+        <%= @diary.text %>
+      </div>
+      <% if @diary.url_text.present?%>
+        <div class="show-url">
+          <a href="<% @diary.url_text %>">参考にしたサイト</a>
+        </div>
+      <% end %>
+    </div>
+    <h2>勉強時間</h2>
+    <div class="diary-time">
+      <%= @diary.hour.name %>時間
+      <%= @diary.minute.name %>分
+    </div>
   </div>
 </div>

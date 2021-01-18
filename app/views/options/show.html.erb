@@ -3,11 +3,17 @@
   <%= render partial: "shared/side-bar" %>
   <div class="show-option">
     <h3>オプション名</h3>
-    <%= @option.name %>
-    <h3>解説</h3>
-    <%= @option.text %>
+    <div class="show-name">
+      <%= @option.name %>
+    </div>
+    <h2>解説</h2>
+    <div class="show-text">
+      <%= @option.text %>
+    </div>
     <% if @option.url_text.present?%>
-      <%= @option.url_text %>
+      <div class="show-url">
+        <a href="<% @option.url_text %>">参考にしたサイト</a>
+      </div>
     <% end %>
   </div>
 </div>

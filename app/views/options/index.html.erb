@@ -4,7 +4,7 @@
   <div class="index-options">
     <% @options.each do |option| %>
       <div class="option">
-        <%= link_to option_path(option.id), class:"link" do %>
+        <%= link_to option_path(option.id), class:"link option-name" do %>
           <%= option.name %>
         <% end %>
       </div>

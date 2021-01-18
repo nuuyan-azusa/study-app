@@ -7,9 +7,7 @@
         <%= diary.year.name %>年
         <%= diary.month.name %>月
         <%= diary.day.name %>日
-        <%= link_to diary_path(diary.id), class:"link" do %>
-          <%= diary.title %>
-        <% end %>
+        <%= link_to "#{diary.title}", diary_path(diary.id), class:"link diary-title"  %>
       </div>
     <% end %>
   </div>
