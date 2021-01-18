@@ -1,8 +1,3 @@
-img {
-  height: 300px;
-  width: 300px;
-  object-fit: contain;
-}
 
 .link{
   display: block;
@@ -106,7 +101,6 @@ img {
   margin: 40px auto;
   width: 150px;
   padding: 10px;
-}
 
 /* エラーメッセージ */
 
