@@ -13,7 +13,7 @@ class DiariesController < ApplicationController
     @diary = Diary.new(diary_params)
     if @diary.valid?
       @diary.save
-      redirect_to root_path 
+      redirect_to diaries_path 
     else
       render :new
     end
@@ -35,7 +35,7 @@ class DiariesController < ApplicationController
 
   def destroy
     if @diary.destroy
-      redirect_to root_path
+      redirect_to diaries_path 
     else
       render :show
     end

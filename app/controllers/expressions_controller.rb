@@ -1,6 +1,6 @@
 class ExpressionsController < ApplicationController
-  before_action :set_expression, only: [:show, :edit, :update]
-  before_action :move_expression, only: [:edit]
+  before_action :set_expression, only: [:show, :edit, :update, :destroy]
+  before_action :move_expression, only: [:edit, :destroy]
   def index
     @expressions = Expression.includes(:user).order('created_at DESC')
   end
@@ -31,6 +31,14 @@ class ExpressionsController < ApplicationController
       redirect_to expression_path(@expression.id)
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @expression.destroy
+      redirect_to expressions_path
+    else
+      render :show
     end
   end
 
