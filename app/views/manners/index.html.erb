@@ -2,19 +2,23 @@
 <div class="main-bar">
   <%= render partial: "shared/side-bar" %>
   <div class="index-manners">
-    <%= form_with(url: search_manners_path, local: true, method: :get, class: "search-form") do |f| %>
-      <%= f.text_field :keyword, placeholder: "検索する", class: "search-input" %>
-      <%= f.submit "検索", class: "search-btn" %>
-    <% end %>
-    <div class="contents row">
-      <% @manners.each do |manner| %>
-        <div class="manner">
-          <%= link_to manner_path(manner.id), class:"link manner-name" do %>
-          <%= manner.name %>
-          <% end %>
-        </div>
+    <% if @manners.present? %>
+      <%= form_with(url: search_manners_path, local: true, method: :get, class: "search-form") do |f| %>
+        <%= f.text_field :keyword, placeholder: "検索する", class: "search-input" %>
+        <%= f.submit "検索", class: "search-btn" %>
       <% end %>
-    </div>
+      <div class="contents row">
+        <% @manners.each do |manner| %>
+          <div class="manner">
+            <%= link_to manner_path(manner.id), class:"link manner-name" do %>
+            <%= manner.name %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      メソッドを追加してください
+    <% end %>
     <%= link_to "メソッドを追加", new_manner_path, class:"post post-btn" %>
   </div>
 </div>

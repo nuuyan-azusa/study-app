@@ -2,19 +2,23 @@
 <div class="main-bar">
   <%= render partial: "shared/side-bar" %>
   <div class="index-expressions">
-    <%= form_with(url: search_expressions_path, local: true, method: :get, class: "search-form") do |f| %>
-      <%= f.text_field :keyword, placeholder: "検索する", class: "search-input" %>
-      <%= f.submit "検索", class: "search-btn" %>
-    <% end %>
-    <div class="contents row">
-      <% @expressions.each do |expression| %>
-        <div class="expression">
-          <%= link_to expression_path(expression.id), class:"link expression-name" do %>
-          <%= expression.name %>
-          <% end %>
-        </div>
+    <% if @expressions.present? %>
+      <%= form_with(url: search_expressions_path, local: true, method: :get, class: "search-form") do |f| %>
+        <%= f.text_field :keyword, placeholder: "検索する", class: "search-input" %>
+        <%= f.submit "検索", class: "search-btn" %>
       <% end %>
-    </div>
+      <div class="contents row">
+        <% @expressions.each do |expression| %>
+          <div class="expression">
+            <%= link_to expression_path(expression.id), class:"link expression-name" do %>
+            <%= expression.name %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      正規表現を追加してください
+    <% end %>
     <%= link_to "正規表現を追加", new_expression_path, class:"post post-btn" %>
   </div>
 </div>

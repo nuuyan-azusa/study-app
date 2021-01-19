@@ -33,12 +33,16 @@
   margin: auto 0px;
 }
 
+.top-title{
+  color: aliceblue;
+}
+
 /* サイドバー */
 
 .side-bar{
   width: 20vw;
   background-color: pink;
-  padding-top: 10vh;
+  padding: 10vh 0 10vh;
   border-right: 2px solid white;
   font-size: 15px;
 }
@@ -96,7 +100,7 @@
 }
 
 .post-btn{
-  margin: 5vh auto 0;
+  margin: 15vh auto 0;
 }
 
 .delete-btn{
@@ -155,10 +159,6 @@ h2{
 .form-box{
   display: block;
   margin: 0 auto 5vh;
-}
-
-.btn{
-  margin: 50px auto 50px;
 }
 
 .name, .url-text, .title{

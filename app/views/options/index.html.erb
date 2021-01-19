@@ -2,19 +2,23 @@
 <div class="main-bar">
   <%= render partial: "shared/side-bar" %>
   <div class="index-options">
-    <%= form_with(url: search_options_path, local: true, method: :get, class: "search-form") do |f| %>
-      <%= f.text_field :keyword, placeholder: "検索する", class: "search-input" %>
-      <%= f.submit "検索", class: "search-btn" %>
-    <% end %>
-    <div class="contents row">
-      <% @options.each do |option| %>
-        <div class="option">
-          <%= link_to option_path(option.id), class:"link option-name" do %>
-          <%= option.name %>
-          <% end %>
-        </div>
+    <% if @options.present? %>
+      <%= form_with(url: search_options_path, local: true, method: :get, class: "search-form") do |f| %>
+        <%= f.text_field :keyword, placeholder: "検索する", class: "search-input" %>
+        <%= f.submit "検索", class: "search-btn" %>
       <% end %>
-    </div>
+      <div class="contents row">
+        <% @options.each do |option| %>
+          <div class="option">
+            <%= link_to option_path(option.id), class:"link option-name" do %>
+            <%= option.name %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      オプションを追加してください
+    <% end %>
     <%= link_to "オプションを追加", new_option_path, class:"post post-btn" %>
   </div>
 </div>

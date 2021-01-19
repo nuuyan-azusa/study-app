@@ -1,7 +1,7 @@
 <div class="top-bar">
   <% if user_signed_in? %>
     <div class="wrapper">
-      <h1><%= link_to "#{current_user.nickname}の日記", root_path, class:"link" %></h1>
+      <h1><%= link_to "#{current_user.nickname}の日記", root_path, class:"link top-title" %></h1>
     </div>
     <div class="user-nav">
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"post" %>
@@ -9,7 +9,7 @@
     </div>
   <% else %>
     <div class="wrapper">
-      <h1><%= link_to "勉強日記", root_path, class:"link" %></h1>
+      <h1><%= link_to "勉強日記", root_path, class:"link top-title" %></h1>
     </div>
     <div class="user-nav">
       <%= link_to "ログイン", new_user_session_path, class:"post" %>
