@@ -1,19 +1,23 @@
 <%= render partial: "shared/header" %>
 <div class="main-bar">
   <%= render partial: "shared/side-bar" %>
-  <div class="index-diaries">
+  <div class="search-diaries">
     <%= form_with(url: search_diaries_path, local: true, method: :get, class: "search-form") do |f| %>
       <%= f.text_field :keyword, placeholder: "検索する", class: "search-input" %>
       <%= f.submit "検索", class: "search-btn" %>
     <% end %>
     <div class="contents row">
-      <% @diaries.each do |diary| %>
-        <div class="diary">
-          <%= diary.year.name %>年
-          <%= diary.month.name %>月
-          <%= diary.day.name %>日
-          <%= link_to "#{diary.title}", diary_path(diary.id), class:"link diary-title"  %>
-        </div>
+      <% if @diaries.present?%>
+        <% @diaries.each do |diary| %>
+          <div class="diary">
+            <%= diary.year.name %>年
+            <%= diary.month.name %>月
+            <%= diary.day.name %>日
+            <%= link_to "#{diary.title}", diary_path(diary.id), class:"link diary-title"  %>
+          </div>
+        <% end %>
+      <% else %>
+        検索結果がありません
       <% end %>
     </div>
     <%= link_to "日記を追加", new_diary_path, class:"post post-btn" %>

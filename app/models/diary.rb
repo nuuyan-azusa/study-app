@@ -19,4 +19,12 @@ class Diary < ApplicationRecord
     validates :month_id
     validates :year_id
   end
+
+  def self.search(search)
+    if search != ""
+      Diary.where('title LIKE(?)', "%#{search}%")
+    else
+      Diary.all
+    end
+  end
 end

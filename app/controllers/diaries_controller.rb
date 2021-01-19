@@ -1,4 +1,5 @@
 class DiariesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
   before_action :move_diary, only: [:edit, :destroy]
   def index
@@ -20,6 +21,10 @@ class DiariesController < ApplicationController
   end
 
   def show
+  end
+
+  def search
+    @diaries = Diary.search(params[:keyword])
   end
 
   def edit
@@ -51,8 +56,8 @@ class DiariesController < ApplicationController
   end
 
   def move_diary
-    unless 
-      current_user.id == @diary.user.id  
+    unless current_user.id == @diary.user.id
+      redirect_to root_path  
     end
   end
 

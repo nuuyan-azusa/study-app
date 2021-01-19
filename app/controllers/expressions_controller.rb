@@ -1,4 +1,5 @@
 class ExpressionsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_expression, only: [:show, :edit, :update, :destroy]
   before_action :move_expression, only: [:edit, :destroy]
   def index
@@ -21,6 +22,10 @@ class ExpressionsController < ApplicationController
 
   def show
     @expression = Expression.find(params[:id])
+  end
+
+  def search
+    @expressions = Expression.search(params[:keyword])
   end
 
   def edit
@@ -52,8 +57,8 @@ class ExpressionsController < ApplicationController
   end
 
   def move_expression
-    unless 
-      current_user.id == @expression.user.id  
+    unless current_user.id == @expression.user.id  
+      redirect_to root_path
     end
   end
 

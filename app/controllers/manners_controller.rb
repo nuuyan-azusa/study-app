@@ -1,4 +1,5 @@
 class MannersController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_manner, only: [:show, :edit, :update, :destroy]
   before_action :move_manner, only: [:edit, :destroy]
   def index
@@ -20,6 +21,10 @@ class MannersController < ApplicationController
   end
 
   def show
+  end
+
+  def search
+    @manners = Manner.search(params[:keyword])
   end
 
   def edit
@@ -51,8 +56,8 @@ class MannersController < ApplicationController
   end
 
   def move_manner
-    unless 
-      current_user.id == @manner.user.id  
+    unless current_user.id == @manner.user.id
+      redirect_to root_path
     end
   end
 

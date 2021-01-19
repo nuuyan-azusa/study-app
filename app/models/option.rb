@@ -5,4 +5,12 @@ class Option < ApplicationRecord
     validates :text
   end
   
+  def self.search(search)
+    if search != ""
+      Option.where('name LIKE(?)', "%#{search}%")
+    else
+      Option.all
+    end
+  end
+
 end
