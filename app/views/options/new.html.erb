@@ -4,6 +4,8 @@
   <div class="new-option">
     <%= form_with model: @option, url:options_path, local: true do |f| %>
 
+    <h2>新規作成画面<h2>
+
     <%= render 'shared/error_messages', model: @option %>
 
       <%= f.text_field :name, class:"name form-box", placeholder:"オプション名" %>

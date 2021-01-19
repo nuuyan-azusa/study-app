@@ -4,6 +4,8 @@
   <div class="new-expression">
     <%= form_with model: @expression, url:expressions_path, local: true do |f| %>
 
+    <h2>新規作成画面<h2>
+
     <%= render 'shared/error_messages', model: @expression %>
 
       <%= f.text_field :name, class:"name form-box", placeholder:"正規表現" %>
