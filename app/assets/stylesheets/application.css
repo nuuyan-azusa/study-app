@@ -75,7 +75,9 @@
 .show-text{
   width: 70%;
   margin: auto;
+  white-space: pre-wrap;
 }
+
 
 
 /* メインバー */
@@ -169,6 +171,3 @@
 .month-select, .day-select, .hour-select, .minute-select{
   width: 5vw;
 }
-
-
-

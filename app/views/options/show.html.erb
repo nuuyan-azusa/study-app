@@ -12,7 +12,7 @@
     </div>
     <% if @option.url_text.present?%>
       <div class="show-url">
-        <a href="<% @option.url_text %>">参考にしたサイト</a>
+        <%= link_to "参考にしたサイト", @option.url_text, class:"link option-url"  %>
       </div>
     <% end %>
     <% if user_signed_in? && current_user.id == @option.user_id %>
