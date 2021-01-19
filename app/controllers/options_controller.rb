@@ -1,4 +1,5 @@
 class OptionsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_option, only: [:show, :edit, :update, :destroy]
   before_action :move_option, only: [:edit, :destroy]
 
@@ -21,6 +22,10 @@ class OptionsController < ApplicationController
   end
 
   def show
+  end
+
+  def search
+    @options = Option.search(params[:keyword])
   end
 
   def edit
@@ -52,8 +57,8 @@ class OptionsController < ApplicationController
   end
 
   def move_option
-    unless 
-      current_user.id == @option.user.id  
+    unless current_user.id == @option.user.id  
+      redirect_to root_path
     end
   end
 
