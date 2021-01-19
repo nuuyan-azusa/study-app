@@ -80,10 +80,10 @@
 
 /* メインバー */
 
-.index-diaries, .new-diary, .show-diary,
-.index-manners, .new-manner, .show-manner,
-.index-options, .new-option, .show-option,
-.index-expressions, .new-expression, .show-expression,
+.index-diaries, .new-diary, .show-diary, .search-diaries,
+.index-manners, .new-manner, .show-manner, .search-manners,
+.index-options, .new-option, .show-option, .search-options,
+.index-expressions, .new-expression, .show-expression, .search-expressions,
 .contents{
   text-align: center;
   width: 80vw;
@@ -159,7 +159,7 @@
 .year-select, .month-select, .day-select, .hour-select, .minute-select{
   display: block;
   height: 4vh;
-  margin: 0 3vw;
+  margin: 0 2vw;
 }
 
 .year-select{
@@ -169,3 +169,6 @@
 .month-select, .day-select, .hour-select, .minute-select{
   width: 5vw;
 }
+
+
+
