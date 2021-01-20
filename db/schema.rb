@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2021_01_18_094637) do
     t.integer "minute_id", null: false
     t.bigint "user_id"
     t.string "url_text"
+    t.integer "rate", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_diaries_on_user_id"

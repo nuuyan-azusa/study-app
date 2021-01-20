@@ -79,11 +79,21 @@
 }
 
 .show-text{
-  width: 70%;
-  margin: auto;
   white-space: pre-wrap;
+  width: 70%;
+  border: 1px solid black;
+  margin: 0 auto 10vh;
+  padding: 20px;
+  text-align: left;
 }
 
+.delete-btn{
+  margin: auto
+}
+
+.edit-btn{
+  margin: 15vh auto 0;
+}
 
 
 /* メインバー */
@@ -101,14 +111,6 @@
 
 .post-btn{
   margin: 15vh auto 0;
-}
-
-.delete-btn{
-  margin: auto
-}
-
-.edit-btn{
-  margin: 5vh auto 0;
 }
 
 
