@@ -27,6 +27,19 @@
       <%= @diary.hour.name %>時間
       <%= @diary.minute.name %>分
     </div>
+    <h2>自己評価</h2>
+    <h4 class="mb-3">理解度：<%= @diary.rate %>点 </h4>
+    <div id="star-rate-<%= @diary.id %>"></div>
+      <script>
+        $('#star-rate-<%= @diary.id %>').raty({
+          size: 36,
+          starOff:  '<%= asset_path('star-off.png') %>',
+          starOn : '<%= asset_path('star-on.png') %>',
+          starHalf: '<%= asset_path('star-half.png') %>',
+          half: true,
+          score: <%= @diary.rate %>,
+        });
+      </script> 
     <% if user_signed_in? && current_user.id == @diary.user_id %>
       <%= link_to "編集する", edit_diary_path, class:"post edit-btn" %>
       <%= link_to "削除する", diary_path(@diary.id), method: :delete, class:"post delete-btn" %>
