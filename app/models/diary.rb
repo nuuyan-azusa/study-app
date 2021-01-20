@@ -10,6 +10,7 @@ class Diary < ApplicationRecord
   with_options presence: true do
     validates :title
     validates :text
+    validates :rate
   end
 
   with_options numericality: { other_than: 0, message: 'Select' } do
