@@ -4,7 +4,7 @@
   <div class="new-diary">
     <%= form_with model: @diary, local: true do |f| %>
 
-      <h2>新規作成画面<h2>
+      <h2>日記編集画面<h2>
 
        <%= render 'shared/error_messages', model: @diary %>
        
@@ -25,7 +25,8 @@
         <%= f.collection_select(:minute_id, Minute.all, :id, :name, {}, {class:"minute-select"} ) %>分
       </div>
       <div class="field" id="star">
-        <%= f.label :rate,  "星評価 (※必須)" ,id: "e"%>
+        <h4>理解度</h4>
+        <% f.label :rate, id: "e"%>
         <%= f.hidden_field :rate, id: :review_star %>
       </div>
       <script>

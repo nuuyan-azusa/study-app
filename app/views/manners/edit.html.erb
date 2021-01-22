@@ -4,6 +4,8 @@
   <div class="new-manner">
     <%= form_with model: @manner, local: true do |f| %>
 
+    <h2>メソッド編集画面<h2>
+
     <%= render 'shared/error_messages', model: @manner %>
 
       <%= f.text_field :name, class:"name form-box", placeholder:"メソッド名" %>

@@ -24,8 +24,9 @@
         <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"hour-select"} ) %>時間        
         <%= f.collection_select(:minute_id, Minute.all, :id, :name, {}, {class:"minute-select"} ) %>分
       </div>
+      <h4>理解度</h4>
       <div class="field" id="star">
-        <%= f.label :rate,  "星評価 (※必須)" ,id: "e"%>
+        <% f.label :rate, id: "e"%>
         <%= f.hidden_field :rate, id: :review_star %>
       </div>
       <script>
