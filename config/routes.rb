@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'diaries#index'
+  root to: "diaries#home"
   resources :diaries do
+    get 'diaries/home'
     collection do
       get 'search'
     end

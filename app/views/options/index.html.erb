@@ -1,6 +1,4 @@
-<%= render partial: "shared/header" %>
 <div class="main-bar">
-  <%= render partial: "shared/side-bar" %>
   <div class="index-options">
     <% if @options.present? %>
       <%= form_with(url: search_options_path, local: true, method: :get, class: "search-form") do |f| %>

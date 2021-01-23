@@ -1,6 +1,4 @@
-<%= render partial: "shared/header" %>
 <div class="main-bar">
-  <%= render partial: "shared/side-bar" %>
   <div class="index-expressions">
     <% if @expressions.present? %>
       <%= form_with(url: search_expressions_path, local: true, method: :get, class: "search-form") do |f| %>
