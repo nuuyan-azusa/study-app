@@ -57,7 +57,7 @@ class DiariesController < ApplicationController
 
   def move_diary
     unless current_user.id == @diary.user.id
-      redirect_to root_path  
+      redirect_to root_path
     end
   end
 
