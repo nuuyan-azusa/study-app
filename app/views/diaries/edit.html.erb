@@ -1,5 +1,5 @@
 <div class="main-bar">
-  <div class="new-diary">
+  <div class="edit-diary">
     <%= form_with model: @diary, local: true do |f| %>
 
       <h2>日記編集画面<h2>
@@ -40,4 +40,10 @@
       <%= f.submit "投稿する", class:"post post-btn" %>
     <% end %>
   </div>
+    <ul class="lists" id="lists">
+    <li class="menu-list"><%= link_to "日記",  diaries_path, class:"list" %></li>
+    <li class="menu-list"><%= link_to "メソッド", manners_path, class:"list"  %></li>
+    <li class="menu-list"><%= link_to "オプション", options_path, class:"list"  %></li>
+    <li class="menu-list"><%= link_to "正規表現", expressions_path, class:"list"  %></li>
+  </ul>
 </div>

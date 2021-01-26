@@ -75,9 +75,12 @@ select {
 }
 
 
+
+
 .link{
   display: block;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .post{
@@ -129,14 +132,14 @@ select {
   background-size: 100%;
   height: 70vh;
   width: 100vw;
-  padding: 20vh 0 20vh;
+  display: flex;
 }
 
 .root-contents{
   background-color: rgb(165, 202, 235);
   width: 50vw;
   padding: 25px;
-  margin: 30px auto;
+  margin: auto;
 }
 
 /* ヘッダー */
@@ -163,6 +166,7 @@ select {
   padding: 0 3vw 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .list-content{
@@ -173,6 +177,38 @@ select {
   display: flex;
 }
 
+.menu{
+  cursor: pointer;
+}
+
+.lists{
+  border: 1px solid white;
+  display: none;
+  background-color: rgb(245, 234, 187);
+  text-align: center;
+  padding: 5vh 10vw;
+  margin: 3px 3px auto auto;
+}
+
+
+.list{
+  text-decoration: none;
+}
+
+.lists li {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .8s;
+  }
+
+.lists li:hover {
+  background: white;
+  color: black;
+  }
+    
 /* フッター */
 
 .foot-bar{
@@ -237,6 +273,7 @@ select {
 .index-manners, .new-manner, .show-manner, .search-manners,
 .index-options, .new-option, .show-option, .search-options,
 .index-expressions, .new-expression, .show-expression, .search-expressions,
+.container,
 .contents{
   background-color: rgb(176, 204, 217);
   text-align: center;
@@ -252,6 +289,7 @@ select {
   background-attachment: fixed;
   background-size: 100%;
   width: 100vw;
+  display: flex;
 }
 
 
