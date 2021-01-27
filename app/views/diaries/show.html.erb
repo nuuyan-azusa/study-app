@@ -27,7 +27,7 @@
     </div>
     <div class="title2">自己評価</div>
     <div class="diary-star">
-      <h4 class="mb-3">理解度：<%= @diary.rate %>点 </h4>
+      <div class="star-title">理解度：<%= @diary.rate %>点 </div>
       <div id="star-rate-<%= @diary.id %>"></div>
         <script>
           $('#star-rate-<%= @diary.id %>').raty({

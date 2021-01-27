@@ -331,6 +331,20 @@ form{
   text-decoration: none;
   display: block;
   font-size: 1em;
+  padding-bottom: 0.5vh;
+}
+
+.foot-title{
+  font-size: 1.5em;
+  font-family: 'Vollkorn', serif;
+  padding-bottom: 1vh;
+  color: rgb(152, 65, 39);
+}
+
+.foot-title2{
+  font-size: 2em;
+  font-family: 'Vollkorn', serif;
+  color: rgb(152, 65, 39);
 }
 
 /* 一覧表示 */
@@ -365,7 +379,7 @@ form{
 .show-text{
   white-space: pre-wrap;
   width: 70%;
-  border: 1px solid black;
+  border: 1px solid white;
   margin: 3vh auto 10vh;
   padding: 20px;
   text-align: left;
@@ -382,6 +396,15 @@ form{
 .title2{
   color: white;
   font-size: 2em;
+}
+
+.star-title{
+  font-size: 1em;
+  padding-bottom: 2vh;
+}
+
+.diary-url{
+  color: rgb(13, 82, 161);
 }
 
 /* メインバー */
