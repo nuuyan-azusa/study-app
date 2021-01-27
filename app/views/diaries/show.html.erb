@@ -43,10 +43,4 @@
       <%= link_to "削除する", "/users/#{current_user.id}/diaries/#{@diary.id}", method: :delete, class:"post delete-btn" %>
     <% end %>
   </div>
-    <ul class="lists" id="lists">
-    <li><%= link_to "日記",  diaries_path, class:"list" %></li>
-    <li><%= link_to "メソッド", manners_path, class:"list"  %></li>
-    <li><%= link_to "オプション", options_path, class:"list"  %></li>
-    <li><%= link_to "正規表現", expressions_path, class:"list"  %></li>
-  </ul>
 </div>

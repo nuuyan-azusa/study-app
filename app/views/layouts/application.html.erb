@@ -25,15 +25,33 @@
         <ul><div class="user-nav">
           <li class="list-content"><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class:"top-contents" %></li>
           <li class="list-content"><%= link_to "勉強日記を作成する", new_diary_path, class:"top-contents" %></li>
-          <li class="menu" id="menu">menu▼</li>
+          <li>
+            <div id="nav-open">
+              <span></span>
+            </div>
+          </li>
         </div></ul>
       <% else %>
         <ul><div class="user-nav">
           <li class="list-content"><%= link_to "ログイン", new_user_session_path, class:"top-contents" %></li>
           <li class="list-content"><%= link_to "新規登録", new_user_registration_path, class:"top-contents" %></li>
-          <li class="menu" id="menu">menu▽</li>
+          <li>
+            <div id="nav-open">
+              <span></span>
+            </div>
+          </li>
         </div></ul>
       <% end %>
+      <div id="nav-content">
+        <div class="hamburger-top"></div>
+          <ul class="category">
+            <li><%= link_to "日記",  diaries_path, class:"list" %></li>
+            <li><%= link_to "メソッド", manners_path, class:"list"  %></li>
+            <li><%= link_to "オプション", options_path, class:"list"  %></li>
+            <li><%= link_to "正規表現", expressions_path, class:"list"  %></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
   
