@@ -74,6 +74,10 @@ select {
 }
 
 
+li{
+  list-style: none;
+}
+
 form{
   font-size: 1en;
 }
