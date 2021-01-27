@@ -412,10 +412,15 @@ form{
 .index-diaries, .new-diary, .show-diary, .edit-diary, .search-diaries,
 .index-manners, .new-manner, .show-manner, .edit-manner, .search-manners,
 .index-options, .new-option, .show-option, .edit-option, .search-options,
-.index-expressions, .new-expression, .show-expression, .edit-expression, .search-expressions,
-.container,
-.contents{
+.index-expressions, .new-expression, .show-expression, .edit-expression, .search-expressions{
   background-color: rgba(176, 204, 217,0.8);
+  text-align: center;
+  width: 70vw;
+  padding: 10vh 0 15vh;
+  margin: 10vh auto 10vh;
+}
+
+.container, .contents{
   text-align: center;
   width: 70vw;
   padding: 10vh 0 15vh;
