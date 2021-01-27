@@ -6,10 +6,12 @@
 
     <%= render 'shared/error_messages', model: @option %>
 
-      <%= f.text_field :name, class:"name form-box", placeholder:"オプション名" %>
-      <%= f.text_area :text, class:"text form-box", placeholder:"説明" %>    
-      <%= f.text_field :url_text, class:"url-text form-box", placeholder:"参考にしたサイトURL" %>
-      <%= f.submit "投稿する", class:"post-btn post" %>
-    <% end %>
+      <div class="text-box">
+        <%= f.text_field :name, class:"name form-box", placeholder:"オプション名" %>
+        <%= f.text_area :text, class:"text form-box", placeholder:"説明" %>    
+        <%= f.text_field :url_text, class:"url-text form-box", placeholder:"参考にしたサイトURL" %>
+        <%= f.submit "投稿する", class:"post-btn post" %>
+      </div>
+      <% end %>
   </div>
 </div>

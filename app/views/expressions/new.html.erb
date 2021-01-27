@@ -6,10 +6,12 @@
 
     <%= render 'shared/error_messages', model: @expression %>
 
-      <%= f.text_field :name, class:"name form-box", placeholder:"正規表現" %>
-      <%= f.text_area :text, class:"text form-box", placeholder:"説明" %>    
-      <%= f.text_field :url_text, class:"url-text form-box", placeholder:"参考にしたサイトURL" %>
-      <%= f.submit "投稿する", class:"post post-btn" %>
+      <div class="text-box">
+        <%= f.text_field :name, class:"name form-box", placeholder:"タイトル" %>
+        <%= f.text_area :text, class:"text form-box", placeholder:"説明" %>    
+        <%= f.text_field :url_text, class:"url-text form-box", placeholder:"参考にしたサイトURL" %>
+        <%= f.submit "投稿する", class:"post post-btn" %>
+      </div>
     <% end %>
   </div>
 </div>
