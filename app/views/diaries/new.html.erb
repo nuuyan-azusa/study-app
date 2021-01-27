@@ -2,14 +2,14 @@
   <div class="new-diary">
     <%= form_with model: @diary, url:diaries_path, local: true do |f| %>
 
-      <h2>新規作成画面<h2>
+      <div class="title2">新規作成画面</div>
 
        <%= render 'shared/error_messages', model: @diary %>
        
       <div class="text-box">
       <%= f.text_field :title, class:"title form-box", placeholder:"タイトル" %>
       <%= f.text_area :text, class:"text form-box", placeholder:"テキスト" %>
-      <%= f.text_field :url_text, class:"url-text form-box", placeholder:"URL" %>
+      <%= f.text_field :url_text, class:"url-text form-box", placeholder:"参考にしたサイトURL" %>
       </div>
       <h4>勉強した日</h4>
       <div class="day-box">

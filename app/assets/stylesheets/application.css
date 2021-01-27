@@ -48,7 +48,6 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
-  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -75,7 +74,9 @@ select {
 }
 
 
-
+form{
+  font-size: 1en;
+}
 
 .link{
   display: block;
@@ -222,6 +223,7 @@ select {
   text-decoration: none;
   font-size: 20px;
   font-family: 'Vollkorn', serif;
+  color: white;
 }
 
 .category li{
@@ -234,7 +236,7 @@ select {
 }
 
 .category li:hover {
-  background: white;
+  background: rgb(238, 206, 158);
   transition: all .8s;
   }
 
@@ -314,14 +316,17 @@ select {
 .foot-bar{
   width: 100vw;
   background-color: rgb(224, 208, 167);
-  font-size: 15px;
-  height: 15vh;
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
 }
 
 .foot-content{
-  padding: 20px;
   color: white;
   text-decoration: none;
+  display: block;
+  font-size: 1em;
 }
 
 /* 一覧表示 */
@@ -331,8 +336,10 @@ select {
 }
 
 .diary-title, .expression-name, .manner-name, .option-name{
-  font-size: 15px;
+  font-size: 18px;
   padding-top: 1vh;
+  color: rgb(28, 27, 88);
+  font-family: 'Vollkorn', serif;
 }
 
 /* 詳細ページ */
@@ -341,19 +348,21 @@ select {
   padding-bottom: 40px;
 }
 
-.diary-day, .diary-contents, .diary-time{
+.diary-day, .diary-contents, .diary-time, .diary-star{
   padding-bottom: 8vh;
+  padding-top: 3vh;
 }
 
-.show-title, .show-name, .show-text, .show-url{
-  padding-bottom: 3vh;
+.show-title, .show-name, .show-text, .show-url, .diary-star{
+  padding-bottom: 8vh;
+  padding-top: 3vh;
 }
 
 .show-text{
   white-space: pre-wrap;
   width: 70%;
   border: 1px solid black;
-  margin: 0 auto 10vh;
+  margin: 3vh auto 10vh;
   padding: 20px;
   text-align: left;
 }
@@ -366,13 +375,17 @@ select {
   margin: 15vh auto 0;
 }
 
+.title2{
+  color: white;
+  font-size: 2em;
+}
 
 /* メインバー */
 
-.index-diaries, .new-diary, .show-diary, .search-diaries,
-.index-manners, .new-manner, .show-manner, .search-manners,
-.index-options, .new-option, .show-option, .search-options,
-.index-expressions, .new-expression, .show-expression, .search-expressions,
+.index-diaries, .new-diary, .show-diary, .edit-diary, .search-diaries,
+.index-manners, .new-manner, .show-manner, .edit-manner, .search-manners,
+.index-options, .new-option, .show-option, .edit-option, .search-options,
+.index-expressions, .new-expression, .show-expression, .edit-expression, .search-expressions,
 .container,
 .contents{
   background-color: rgb(176, 204, 217);
@@ -424,10 +437,11 @@ select {
   font-size: 13px;
 }
 
-.user-page{
+.title3{
   font-size: 30px;
   font-family: 'Vollkorn', serif;
   padding-bottom: 10vh;
+  color: white;
 }
 
 .user-file{
@@ -459,10 +473,6 @@ select {
 }
 
 /* 投稿画面 */
-
-h2{
-  color: white;
-}
 
 .form-box{
   display: block;

@@ -1,6 +1,6 @@
 <div class="main-bar">
   <div class="container">
-    <h2 class="user-page">Sign up</h2>
+    <div class="title3">Sign up</div>
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <%= devise_error_messages! %>
 

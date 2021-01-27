@@ -59,10 +59,23 @@
 
   <footer>
   <div class="foot-bar">
-    <%= link_to "日記",  diaries_path, class:"foot-content" %>
-    <%= link_to "メソッド", manners_path, class:"foot-content" %>
-    <%= link_to "オプション", options_path, class:"foot-content" %>
-    <%= link_to "正規表現", expressions_path, class:"foot-content" %>
+    <div class="foot-left">
+      <div class="title3">StudyApp</div>
+    </div>
+    <div class="foot-info">
+      <p  class="foot-content">About</p>
+      <p class="foot-content">利用規約</p>
+      <p class="foot-content">プライバシー</p>
+      <p class="foot-content">ガイドライン</p>
+      <p class="foot-content">ご意見</p>
+      <p class="foot-content">ヘルプ</p>
+    </div>
+    <div class="foot-menu">
+      <%= link_to "日記",  diaries_path, class:"foot-content" %>
+      <%= link_to "メソッド", manners_path, class:"foot-content" %>
+      <%= link_to "オプション", options_path, class:"foot-content" %>
+      <%= link_to "正規表現", expressions_path, class:"foot-content" %>
+    </div>
   </div>
   </footer>
 

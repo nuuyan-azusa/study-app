@@ -1,12 +1,12 @@
 <div class="main-bar">
   <div class="show-diary">
-    <h2>勉強した日</h2>
+    <div class="title2">勉強した日</div>
     <div class="diary-day">
       <%= @diary.year.name %>年
       <%= @diary.month.name %>月
       <%= @diary.day.name %>日
     </div>
-    <h2>内容</h2>
+    <div class="title2">内容</div>
     <div class="diary-contents">
       <div class="show-title">
         <%= @diary.title %>
@@ -20,24 +20,26 @@
         </div>
       <% end %>
     </div>
-    <h2>勉強時間</h2>
+    <div class="title2">勉強時間</div>
     <div class="diary-time">
       <%= @diary.hour.name %>時間
       <%= @diary.minute.name %>分
     </div>
-    <h2>自己評価</h2>
-    <h4 class="mb-3">理解度：<%= @diary.rate %>点 </h4>
-    <div id="star-rate-<%= @diary.id %>"></div>
-      <script>
-        $('#star-rate-<%= @diary.id %>').raty({
-          size: 36,
-          starOff:  '<%= asset_path('star-off.png') %>',
-          starOn : '<%= asset_path('star-on.png') %>',
-          starHalf: '<%= asset_path('star-half.png') %>',
-          half: true,
-          score: <%= @diary.rate %>,
-        });
-      </script> 
+    <div class="title2">自己評価</div>
+    <div class="diary-star">
+      <h4 class="mb-3">理解度：<%= @diary.rate %>点 </h4>
+      <div id="star-rate-<%= @diary.id %>"></div>
+        <script>
+          $('#star-rate-<%= @diary.id %>').raty({
+            size: 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            half: true,
+            score: <%= @diary.rate %>,
+          });
+        </script> 
+      </div>
     <% if user_signed_in? && current_user.id == @diary.user_id %>
       <%= link_to "編集する", edit_diary_path, class:"post edit-btn" %>
       <%= link_to "削除する", "/users/#{current_user.id}/diaries/#{@diary.id}", method: :delete, class:"post delete-btn" %>
