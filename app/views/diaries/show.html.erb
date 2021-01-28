@@ -20,11 +20,13 @@
         </div>
       <% end %>
     </div>
+    <% if @diary.hour_id != 0 && @diary.minute_id != 0 %>
     <div class="title2">勉強時間</div>
     <div class="diary-time">
       <%= @diary.hour.name %>時間
       <%= @diary.minute.name %>分
     </div>
+    <% end %>
     <div class="title2">自己評価</div>
     <div class="diary-star">
       <div class="star-title">理解度：<%= @diary.rate %>点 </div>
