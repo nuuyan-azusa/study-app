@@ -14,7 +14,7 @@ class DiariesController < ApplicationController
     @diary = Diary.new(diary_params)
     if @diary.valid?
       @diary.save
-      redirect_to diaries_path 
+      redirect_to diaries_path
     else
       render :new
     end
@@ -27,7 +27,8 @@ class DiariesController < ApplicationController
     split_keyword = params[:keyword].split(/[[:blank:]]+/)
     @diaries = []
     split_keyword.each do |keyword|
-      next if keyword == ""
+      next if keyword == ''
+
       @diaries += Diary.where('title LIKE(?)', "%#{keyword}%").or(Diary.where('text LIKE(?)', "%#{keyword}%"))
     end
     @diaries.uniq!
@@ -46,15 +47,17 @@ class DiariesController < ApplicationController
 
   def destroy
     if @diary.destroy
-      redirect_to diaries_path 
+      redirect_to diaries_path
     else
       render :show
     end
   end
 
   private
+
   def diary_params
-    params.require(:diary).permit(:title,:text,:year_id,:month_id,:day_id,:hour_id,:minute_id,:url_text,:rate).merge(user_id: current_user.id)
+    params.require(:diary).permit(:title, :text, :year_id, :month_id, :day_id, :hour_id, :minute_id, :url_text,
+                                  :rate).merge(user_id: current_user.id)
   end
 
   def set_diary
@@ -62,9 +65,6 @@ class DiariesController < ApplicationController
   end
 
   def move_diary
-    unless current_user.id == @diary.user.id
-      redirect_to root_path
-    end
+    redirect_to root_path unless current_user.id == @diary.user.id
   end
-
 end

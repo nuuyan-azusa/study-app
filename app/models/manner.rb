@@ -6,11 +6,10 @@ class Manner < ApplicationRecord
   end
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Manner.where('name LIKE(?)', "%#{search}%")
     else
       Manner.all
     end
   end
-  
 end

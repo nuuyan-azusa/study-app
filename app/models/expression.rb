@@ -6,11 +6,10 @@ class Expression < ApplicationRecord
   end
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Expression.where('name LIKE(?)', "%#{search}%")
     else
       Expression.all
     end
   end
-  
 end

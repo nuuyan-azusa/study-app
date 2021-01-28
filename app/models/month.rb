@@ -16,5 +16,4 @@ class Month < ActiveHash::Base
   ]
   include ActiveHash::Associations
   has_many :diaries
-  
 end

@@ -5,7 +5,7 @@ class ExpressionsController < ApplicationController
   def index
     @expressions = Expression.includes(:user).order('created_at DESC')
   end
-  
+
   def new
     @expression = Expression.new
   end
@@ -48,6 +48,7 @@ class ExpressionsController < ApplicationController
   end
 
   private
+
   def expression_params
     params.require(:expression).permit(:name, :text, :url_text).merge(user_id: current_user.id)
   end
@@ -57,9 +58,6 @@ class ExpressionsController < ApplicationController
   end
 
   def move_expression
-    unless current_user.id == @expression.user.id  
-      redirect_to root_path
-    end
+    redirect_to root_path unless current_user.id == @expression.user.id
   end
-
 end

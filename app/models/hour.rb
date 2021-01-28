@@ -20,5 +20,4 @@ class Hour < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :diaries
-  
 end

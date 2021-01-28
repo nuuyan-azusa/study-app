@@ -6,7 +6,7 @@ class OptionsController < ApplicationController
   def index
     @options = Option.includes(:user).order('created_at DESC')
   end
-  
+
   def new
     @option = Option.new
   end
@@ -48,6 +48,7 @@ class OptionsController < ApplicationController
   end
 
   private
+
   def option_params
     params.require(:option).permit(:name, :text, :url_text).merge(user_id: current_user.id)
   end
@@ -57,9 +58,6 @@ class OptionsController < ApplicationController
   end
 
   def move_option
-    unless current_user.id == @option.user.id  
-      redirect_to root_path
-    end
+    redirect_to root_path unless current_user.id == @option.user.id
   end
-
 end

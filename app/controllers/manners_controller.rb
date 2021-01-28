@@ -47,6 +47,7 @@ class MannersController < ApplicationController
   end
 
   private
+
   def manner_params
     params.require(:manner).permit(:name, :text, :url_text).merge(user_id: current_user.id)
   end
@@ -56,9 +57,6 @@ class MannersController < ApplicationController
   end
 
   def move_manner
-    unless current_user.id == @manner.user.id
-      redirect_to root_path
-    end
+    redirect_to root_path unless current_user.id == @manner.user.id
   end
-
 end
