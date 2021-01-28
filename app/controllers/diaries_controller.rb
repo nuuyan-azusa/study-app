@@ -24,7 +24,13 @@ class DiariesController < ApplicationController
   end
 
   def search
-    @diaries = Diary.search(params[:keyword])
+    split_keyword = params[:keyword].split(/[[:blank:]]+/)
+    @diaries = []
+    split_keyword.each do |keyword|
+      next if keyword == ""
+      @diaries += Diary.where('title LIKE(?)', "%#{keyword}%") && Diary.where('text LIKE(?)', "%#{keyword}%")
+    end
+    @diaries.uniq!
   end
 
   def edit
