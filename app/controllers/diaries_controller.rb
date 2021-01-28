@@ -28,7 +28,7 @@ class DiariesController < ApplicationController
     @diaries = []
     split_keyword.each do |keyword|
       next if keyword == ""
-      @diaries += Diary.where('title LIKE(?)', "%#{keyword}%") && Diary.where('text LIKE(?)', "%#{keyword}%")
+      @diaries += Diary.where('title LIKE(?)', "%#{keyword}%").or(Diary.where('text LIKE(?)', "%#{keyword}%"))
     end
     @diaries.uniq!
   end
