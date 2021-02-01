@@ -547,3 +547,9 @@ form{
 .month-select, .day-select, .hour-select, .minute-select{
   width: 5vw;
 }
+
+.form-title{
+  font-family: 'Vollkorn', serif;
+  color: rgb(42, 70, 95);
+  font-size: 1.5em;
+}
