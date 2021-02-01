@@ -24,7 +24,13 @@ class MannersController < ApplicationController
   end
 
   def search
-    @manners = Manner.search(params[:keyword])
+    split_keyword = params[:keyword].split(/[[:blank:]]+/)
+    @manners = []
+    split_keyword.each do |keyword|
+      next if keyword == ""
+      @manners += Manner.where('name LIKE(?)', "%#{keyword}%").or(Manner.where('text LIKE(?)', "%#{keyword}%"))
+    end
+    @manners.uniq!
   end
 
   def edit

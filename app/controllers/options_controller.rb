@@ -25,7 +25,13 @@ class OptionsController < ApplicationController
   end
 
   def search
-    @options = Option.search(params[:keyword])
+    split_keyword = params[:keyword].split(/[[:blank:]]+/)
+    @options = []
+    split_keyword.each do |keyword|
+      next if keyword == ""
+      @options += Option.where('name LIKE(?)', "%#{keyword}%").or(Option.where('text LIKE(?)', "%#{keyword}%"))
+    end
+    @options.uniq!
   end
 
   def edit

@@ -25,7 +25,13 @@ class ExpressionsController < ApplicationController
   end
 
   def search
-    @expressions = Expression.search(params[:keyword])
+    split_keyword = params[:keyword].split(/[[:blank:]]+/)
+    @expressions = []
+    split_keyword.each do |keyword|
+      next if keyword == ""
+      @expressions += Expression.where('name LIKE(?)', "%#{keyword}%").or(Expression.where('text LIKE(?)', "%#{keyword}%"))
+    end
+    @expressions.uniq!
   end
 
   def edit
