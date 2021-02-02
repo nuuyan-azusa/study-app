@@ -10,7 +10,7 @@
     </div>
     <% if @manner.url_text.present?%>
       <div class="show-url">
-        <%= link_to "参考にしたサイト", @manner.url_text, class:"link manner-url"  %>
+        <%= link_to "参考にしたサイト", @manner.url_text, class:"link url"  %>
       </div>
     <% end %>
     <% if user_signed_in? && current_user.id == @manner.user_id %>

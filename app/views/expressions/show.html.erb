@@ -10,7 +10,7 @@
     </div>
     <% if @expression.url_text.present?%>
       <div class="show-url">
-        <%= link_to "参考にしたサイト", @expression.url_text, class:"link expression-url"  %>
+        <%= link_to "参考にしたサイト", @expression.url_text, class:"link url"  %>
       </div>
     <% end %>
     <% if user_signed_in? && current_user.id == @expression.user_id %>

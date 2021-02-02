@@ -403,8 +403,9 @@ form{
   padding-bottom: 2vh;
 }
 
-.diary-url{
+.url{
   color: rgb(13, 82, 161);
+  font-size: 1.3em;
 }
 
 /* メインバー */
