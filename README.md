@@ -1,97 +1,16 @@
-# Studyappのデータベース設計
 
-## usersテーブル
+# StudyApp
 
-| Column   | Type   | Options     
-| -------- | ------ | ----------- 
-| nickname | string | null: false 
-| email    | string | null: false 
-| password | string | null: false 
+[StudyApp](https://study-diary-app.herokuapp.com/)
 
-### Association
+自信が学んだ内容についての日記やメモを投稿することのできるアプリケーションです。
+数あるサイトの中から自分が参考にしたサイトなども同時に保存し、自分だけのメモや教科書を作成する事ができます。
 
-has_many :diaries
-has_many :methods
-has_many :options
-has_many :others
+# DEMO
 
-## diariesテーブル
 
-| Column    | Type       | Options           
-| --------- | -------    | -----------------
-| title     | string     | null: false
-| text      | text       | null: false
-| year_id   | integer    | null: false
-| month_id  | integer    | null: false
-| day_id    | integer    | null: false
-| hour_id   | integer    | null: false
-| minute_id | integer    | null: false
-| url_text  | string     |
-| user      | references | foreign_key: true
+# Features
 
-### Association
-
-belongs_to :user
-
-## mannersテーブル
-
-| Column   | Type       | Options     
-| -------- | ---------- | ----------- 
-| name     | string     | null: false 
-| text     | text       | null: false 
-| url_text | string     |
-| user     | references | foreign_key: true
-
-### Association
-
-belongs_to :user
-
-## optionsテーブル
-
-| Column   | Type       | Options
-| -------- | ---------- | ----------- 
-| name     | string     | null: false
-| text     | text       | null: false
-| url_text | string     |
-| user     | references | foreign_key: true
-
-### Association
-
-belongs_to :user
-
-## expressionsテーブル
-
-| Column   | Type       | Options
-| -------- | ---------- | ----------- 
-| name     | string     | null: false
-| text     | text       | null: false
-| url_text | string     |
-| user     | references | foreign_key: true
-
-### Association
-
-belongs_to :user
-
-## othersテーブル
-
-| Column | Type       | Options
-| ------ | ---------- | -----------
-| title  | string     | null: false
-| user   | references | foreign_key: true
-
-### Association
-
-belongs_to :user
-has_many :other_texts
-
-## other_textsテーブル
-
-| Column   | Type       | Options
-| -------- | ---------- | -----------
-| text     | text       | null: false
-| url_text | string     |
-| other    | references | foreign_key: true
-
-### Association
-
-belongs_to :other
+ウェブで検索したり履歴を確認するよりも分かりやすく情報を探し出す事ができ、得た知識を残す事ができます。
+日記、オプション、メソッド、正規表現が保存できる様になっており、日記には新たに学んだ知識や勉強時間、理解度などを入力して保存することによって後に見返した際により理解を深める事ができる事を目的としています。
+その他3つに関しては、簡潔にタイトル、そのタイトルに関する説明や解説を保存しておくことによって必要な際に簡単にその情報のみを探し出せることを目的としています。
