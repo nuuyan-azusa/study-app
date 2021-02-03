@@ -1,9 +1,8 @@
 class ExpressionsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_expression, only: [:show, :edit, :update, :destroy]
   before_action :move_expression, only: [:edit, :destroy]
   def index
-    @expressions = Expression.includes(:user).order('created_at DESC')
+    @expressions = current_user.expressions.includes(:user).order('created_at DESC')
   end
 
   def new

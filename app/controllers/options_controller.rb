@@ -1,10 +1,9 @@
 class OptionsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_option, only: [:show, :edit, :update, :destroy]
   before_action :move_option, only: [:edit, :destroy]
 
   def index
-    @options = Option.includes(:user).order('created_at DESC')
+    @options = current_user.options.includes(:user).order('created_at DESC')
   end
 
   def new

@@ -1,9 +1,8 @@
 class MannersController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_manner, only: [:show, :edit, :update, :destroy]
   before_action :move_manner, only: [:edit, :destroy]
   def index
-    @manners = Manner.includes(:user).order('created_at DESC')
+    @manners = current_user.manners.includes(:user).order('created_at DESC')
   end
 
   def new
