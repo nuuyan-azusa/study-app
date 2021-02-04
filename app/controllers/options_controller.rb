@@ -27,7 +27,8 @@ class OptionsController < ApplicationController
     split_keyword = params[:keyword].split(/[[:blank:]]+/)
     @options = []
     split_keyword.each do |keyword|
-      next if keyword == ""
+      next if keyword == ''
+
       @options += Option.where('name LIKE(?)', "%#{keyword}%").or(Option.where('text LIKE(?)', "%#{keyword}%"))
     end
     @options.uniq!

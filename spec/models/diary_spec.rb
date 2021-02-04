@@ -38,17 +38,17 @@ RSpec.describe Diary, type: :model do
       it 'year_idが0だと保存できない' do
         @diary.year_id = 0
         @diary.valid?
-        expect(@diary.errors.full_messages).to include("Year Select")
+        expect(@diary.errors.full_messages).to include('Year Select')
       end
       it 'month_idが0だと保存できない' do
         @diary.month_id = 0
         @diary.valid?
-        expect(@diary.errors.full_messages).to include("Month Select")
+        expect(@diary.errors.full_messages).to include('Month Select')
       end
       it 'day_idが0だと保存できない' do
         @diary.day_id = 0
         @diary.valid?
-        expect(@diary.errors.full_messages).to include("Day Select")
+        expect(@diary.errors.full_messages).to include('Day Select')
       end
       it 'rateが空だと保存できない' do
         @diary.rate = nil

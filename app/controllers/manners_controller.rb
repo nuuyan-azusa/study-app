@@ -26,7 +26,8 @@ class MannersController < ApplicationController
     split_keyword = params[:keyword].split(/[[:blank:]]+/)
     @manners = []
     split_keyword.each do |keyword|
-      next if keyword == ""
+      next if keyword == ''
+
       @manners += Manner.where('name LIKE(?)', "%#{keyword}%").or(Manner.where('text LIKE(?)', "%#{keyword}%"))
     end
     @manners.uniq!
