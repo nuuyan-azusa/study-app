@@ -770,8 +770,6 @@
 }));
 
 /* ハンバーガーメニュー */
-$(document).on('turbolinks:load', function() {
-
 jQuery(function ($) {
   $(function () {
     $("#nav-open").on("click", function () {
@@ -785,5 +783,3 @@ jQuery(function ($) {
     });
   });
 }); 
-
-});
