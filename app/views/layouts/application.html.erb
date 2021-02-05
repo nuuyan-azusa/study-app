@@ -23,7 +23,7 @@
       </div>
       <% if user_signed_in? %>
         <ul><div class="user-nav">
-          <li class="list-content"><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class:"top-contents" %></li>
+          <li class="list-content"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"top-contents" %></li>
           <li class="list-content"><%= link_to "勉強日記を作成する", new_diary_path, class:"top-contents" %></li>
           <li>
             <div id="nav-open">
