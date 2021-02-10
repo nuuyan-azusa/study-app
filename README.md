@@ -5,8 +5,8 @@
 数あるサイトの中から自分が参考にしたサイトなども同時に保存し、自分だけのノート、あるいは教科書を作成する事ができます。
 
 # DEMO
-
-'![DEMO](https://user-images.githubusercontent.com/75525377/107490494-4da41a00-6bcd-11eb-84d1-361ec8fa1314.mov)'
+	
+'![demo](https://raw.github.com/wiki/nuuyan-azusa/study-app/images/demo.gif)' 
 
 ## アプリケーション概要
 
