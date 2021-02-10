@@ -6,7 +6,7 @@
 
 # DEMO
 
-https://user-images.githubusercontent.com/75525377/107490494-4da41a00-6bcd-11eb-84d1-361ec8fa1314.mov
+'![DEMO](https://user-images.githubusercontent.com/75525377/107490494-4da41a00-6bcd-11eb-84d1-361ec8fa1314.mov)'
 
 ## アプリケーション概要
 
