@@ -6,7 +6,8 @@
 
 # DEMO
 	
-'![demo](https://raw.github.com/wiki/nuuyan-azusa/study-app/images/demo.gif)' 
+![DEMO](https://user-images.githubusercontent.com/75525377/107651057-70642a80-6cc2-11eb-88ae-1d0ebd5374fd.gif)
+
 
 ## アプリケーション概要
 
