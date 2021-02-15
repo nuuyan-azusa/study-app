@@ -8,7 +8,6 @@
 	
 ![DEMO](https://user-images.githubusercontent.com/75525377/107651057-70642a80-6cc2-11eb-88ae-1d0ebd5374fd.gif)
 
-![demo](https://user-images.githubusercontent.com/75525377/107911475-07213780-6fa0-11eb-8d50-3fea4d72e70c.gif)
 
 
 
